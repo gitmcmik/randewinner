@@ -81,35 +81,35 @@ export default function App() {
               className={`location-item ${location === "Spacer w parku" ? "selected" : ""}`}
               onClick={() => setLocation("Spacer w parku")}
             >
-              <img src="/images/park.jpg" alt="Park" />
+              <img src="images/park.jpg" alt="Park" />
               <div className="location-text">Spacer w parku</div>
             </div>
             <div
               className={`location-item ${location === "Restauracja" ? "selected" : ""}`}
               onClick={() => setLocation("Restauracja")}
             >
-              <img src="/images/restaurant.jpg" alt="Restauracja" />
+              <img src="images/restaurant.jpg" alt="Restauracja" />
               <div className="location-text">Restauracja</div>
             </div>
             <div
               className={`location-item ${location === "Jeziorko" ? "selected" : ""}`}
               onClick={() => setLocation("Jeziorko")}
             >
-              <img src="/images/lake.jpg" alt="Jeziorko" />
+              <img src="images/lake.jpg" alt="Jeziorko" />
               <div className="location-text">Jeziorko</div>
             </div>
             <div
               className={`location-item ${location === "Noc filmowa" ? "selected" : ""}`}
               onClick={() => setLocation("Noc filmowa")}
             >
-              <img src="/images/movie.jpg" alt="Noc filmowa" />
+              <img src="images/movie.jpg" alt="Noc filmowa" />
               <div className="location-text">Noc filmowa</div>
             </div>
             <div
               className={`location-item ${location === "Park rozrywki" ? "selected" : ""}`}
               onClick={() => setLocation("Park rozrywki")}
             >
-              <img src="/images/amusement.jpg" alt="Park rozrywki" />
+              <img src="images/amusement.jpg" alt="Park rozrywki" />
               <div className="location-text">Park rozrywki</div>
             </div>
           </div>
