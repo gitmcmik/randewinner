@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  overflow: hidden; /* Prevent scrollbars */
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px; 
+}
+
+.step-container {
+  text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  padding: 30px 20px; 
+}
+
+h1 {
+  font-size: 48px; 
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 16px;
+  margin: 20px 0;
+  font-size: 22px; 
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.location-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: auto auto(2, 300px);
+  gap: 20px;
+  justify-items: center; 
+  width: 100%;
+  margin-top: 40px;
+}
+
+.location-item:nth-child(4),
+.location-item:nth-child(5) {
+  grid-column: span 1;
+}
+
+.location-item:nth-child(4) {
+  grid-column: 1 / 3; 
+}
+
+.location-item:nth-child(5) {
+  grid-column: 3 / 4; 
+}
+
+.location-item {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center; /* Ensure the content aligns properly */
+  justify-content: center; /* Center the image */
+}
+
+.location-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+.location-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.location-item.selected img {
+  border: 3px solid #4caf50;
+}
+
+.location-text {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px; /* Bigger text for the location descriptions */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px; 
+  }
+
+  input, select, button {
+    font-size: 18px;
+    padding: 12px; 
+  }
+
+  .location-options {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .location-item {
+    height: 250px;
+  }
+
+  .location-text {
+    font-size: 18px;
+  }
+
+  .step-container {
+    padding: 20px; 
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  input, select, button {
+    font-size: 16px;
+    padding: 10px; 
+  }
+
+  .location-options {
+    grid-template-columns: 1fr;
+  }
+
+  .location-item {
+    height: 200px;
+  }
+
+  .location-text {
+    font-size: 16px;
+  }
+}
