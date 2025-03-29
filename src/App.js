@@ -75,41 +75,41 @@ export default function App() {
 
       {step === 3 && (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="step-container">
-          <h1>Choose a location for the date:</h1>
+          <h1>Wybierz miejscówe na randewu 😜:</h1>
           <div className="location-options">
             <div
               className={`location-item ${location === "Spacer w parku" ? "selected" : ""}`}
               onClick={() => setLocation("Spacer w parku")}
             >
-              <img src="images/park.jpg" alt="Park" />
+              <img src={process.env.PUBLIC_URL+"images/park.jpg"} alt="Park" />
               <div className="location-text">Spacer w parku</div>
             </div>
             <div
               className={`location-item ${location === "Restauracja" ? "selected" : ""}`}
               onClick={() => setLocation("Restauracja")}
             >
-              <img src="images/restaurant.jpg" alt="Restauracja" />
+              <img src={process.env.PUBLIC_URL+"images/restaurant.jpg"} alt="Restauracja" />
               <div className="location-text">Restauracja</div>
             </div>
             <div
               className={`location-item ${location === "Jeziorko" ? "selected" : ""}`}
               onClick={() => setLocation("Jeziorko")}
             >
-              <img src="images/lake.jpg" alt="Jeziorko" />
+              <img src={process.env.PUBLIC_URL+"images/lake.jpg"} alt="Jeziorko" />
               <div className="location-text">Jeziorko</div>
             </div>
             <div
               className={`location-item ${location === "Noc filmowa" ? "selected" : ""}`}
               onClick={() => setLocation("Noc filmowa")}
             >
-              <img src="images/movie.jpg" alt="Noc filmowa" />
+              <img src={process.env.PUBLIC_URL+"images/movie.jpg"} alt="Noc filmowa" />
               <div className="location-text">Noc filmowa</div>
             </div>
             <div
               className={`location-item ${location === "Park rozrywki" ? "selected" : ""}`}
               onClick={() => setLocation("Park rozrywki")}
             >
-              <img src="images/amusement.jpg" alt="Park rozrywki" />
+              <img src={process.env.PUBLIC_URL+"images/amusement.jpg"} alt="Park rozrywki" />
               <div className="location-text">Park rozrywki</div>
             </div>
           </div>
